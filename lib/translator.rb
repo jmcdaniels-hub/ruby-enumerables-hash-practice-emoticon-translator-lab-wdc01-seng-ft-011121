@@ -17,12 +17,12 @@ end
 def get_japanese_emoticon(file_path, emoticon)
 emoticon_hash = load_file(file_path)
   emoticon = emoticon_hash.keys.find do |name|
-    emoticon_hash[name][:english] == emoticon 
+    emoticon_hash[name][:japanese] == emoticon 
   end
   if emoticon == nil 
     "Sorry, that emoticon was not found"
   else 
-    emoticon_hash[emoticon][:japanese]
+    emoticon_hash[emoticon][:english]
   end 
 end
 
