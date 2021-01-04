@@ -13,7 +13,6 @@ def load_library(file_path)
 end
   
 
-
 def get_japanese_emoticon(file_path, emoticon)
 emoticon_hash = load_library(file_path)
   emoticon = emoticon_hash.keys.find do |name|
@@ -26,6 +25,14 @@ emoticon_hash = load_library(file_path)
   end 
 end
 
-def get_english_meaning #(file_path, emoticon)
- 
+def get_english_meaning (file_path, emoticon)
+  emoticon_hash = load_library(file_path)
+  get_japanese_emoticon = emoticon_hash.keys.find do |name|
+    result[name][:japanese] == emoticon 
+  end
+  if emoticon == nil
+    "Sorry, that emoticon was not found"
+  else
+    emoticon 
+  end
 end
