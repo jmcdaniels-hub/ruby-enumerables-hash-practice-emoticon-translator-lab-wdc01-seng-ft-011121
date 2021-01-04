@@ -33,6 +33,6 @@ def get_english_meaning (file_path, emoticon)
   if emoticon == nil
     "Sorry, that emoticon was not found"
   else
-    emoticon_hash[emoticon][:english] 
+    emoticon
   end
 end
